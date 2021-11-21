@@ -1,5 +1,5 @@
 {
-  description = "Talks by me.";
+  description = "fix-s22pdf";
 
   inputs = rec {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
