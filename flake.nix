@@ -9,15 +9,11 @@
   outputs = { self, nixpkgs, flake-utils }:
     flake-utils.lib.eachDefaultSystem (system:
       let
-        pkgs = import nixpkgs {
-          inherit system;
-        };
+        pkgs = import nixpkgs { inherit system; };
       in
       {
         devShell = pkgs.mkShell.override { stdenv = pkgs.stdenvNoCC; } {
-          buildInputs = [
-            pkgs.mupdf
-          ];
+          buildInputs = [ pkgs.mupdf ];
         };
       });
 }
