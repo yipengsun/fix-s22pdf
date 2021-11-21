@@ -9,7 +9,15 @@ The official `mupdf` authors have provided [a script](https://github.com/Artifex
 Here is just a doc on how to use it:
 
 ```
-mutool run fix-s22pdf.js <input_to_pdf>
+mutool run fix-s22pdf.js <path_to_pdf_to_fix> out.pdf
 ```
 
 The fixed PDF, `out.pdf`, will be stored in current working directory.
+
+
+## License
+
+I included the `fix-s22pdf.js` verbatim just because NixOS's `mupdf` doesn't
+contain `docs` by default.
+
+The code is license under AGPL-v3.0.
