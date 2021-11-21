@@ -18,13 +18,6 @@
           buildInputs = [
             pkgs.mupdf
           ];
-
-          FONTCONFIG_FILE = pkgs.makeFontsConf {
-            fontDirectories = with pkgs; [
-              source-han-serif-simplified-chinese
-              source-han-sans-simplified-chinese
-            ];
-          };
         };
       });
 }
