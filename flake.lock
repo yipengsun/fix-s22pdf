@@ -2,11 +2,11 @@
   "nodes": {
     "flake-utils": {
       "locked": {
-        "lastModified": 1614513358,
-        "narHash": "sha256-LakhOx3S1dRjnh0b5Dg3mbZyH0ToC9I8Y2wKSkBaTzU=",
+        "lastModified": 1638122382,
+        "narHash": "sha256-sQzZzAbvKEqN9s0bzWuYmRaA03v40gaJ4+iL1LXjaeI=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "5466c5bbece17adaab2d82fae80b46e807611bf3",
+        "rev": "74f7e4319258e287b0f9cb95426c9853b282730b",
         "type": "github"
       },
       "original": {
@@ -17,24 +17,49 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1624668028,
-        "narHash": "sha256-FUxvXMBPQ5jrGhS47jwBFZQte0yDkMCBI5M24mJi5X0=",
+        "lastModified": 1641671388,
+        "narHash": "sha256-aHoO6CpPLJK8hLkPJrpMnCRnj3YbfQZ7HNcXcnI83E0=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "e85975942742a3728226ac22a3415f2355bfc897",
+        "rev": "32356ce11b8cc5cc421b68138ae8c730cc8ad4a2",
         "type": "github"
       },
       "original": {
-        "owner": "NixOS",
+        "id": "nixpkgs",
         "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs-pointer": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1641696799,
+        "narHash": "sha256-ay7HT1mCbv5bs916H/U97jpo/83bPgIPbOeNBmWqDcs=",
+        "owner": "yipengsun",
+        "repo": "nixpkgs-pointer",
+        "rev": "626e8ce18847eef3cfaa628e7b98c0bd7e2b0cd4",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yipengsun",
+        "repo": "nixpkgs-pointer",
         "type": "github"
       }
     },
     "root": {
       "inputs": {
-        "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs"
+        "flake-utils": [
+          "nixpkgs-pointer",
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "nixpkgs-pointer",
+          "nixpkgs"
+        ],
+        "nixpkgs-pointer": "nixpkgs-pointer"
       }
     }
   },
